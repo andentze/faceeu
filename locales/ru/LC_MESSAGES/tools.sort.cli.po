@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-23 14:16+0100\n"
-"PO-Revision-Date: 2023-01-05 16:55+0700\n"
+"PO-Revision-Date: 2023-01-05 17:13+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -93,19 +93,19 @@ msgstr ""
 
 #: tools/sort/cli.py:39
 msgid "faces by their landmarks."
-msgstr ""
+msgstr "лица по их соотношениях."
 
 #: tools/sort/cli.py:40
 msgid "Like 'face-cnn' but sorts by dissimilarity."
-msgstr ""
+msgstr "Как 'face-cnn', но сортирует по несхожести."
 
 #: tools/sort/cli.py:41
 msgid "faces by Yaw (rotation left to right)."
-msgstr ""
+msgstr "лица по рысканию (поворот слева на право)."
 
 #: tools/sort/cli.py:42
 msgid "faces by Pitch (rotation up and down)."
-msgstr ""
+msgstr "лица по высоте (поворот вверх и вниз)."
 
 #: tools/sort/cli.py:43
 msgid ""
@@ -113,19 +113,23 @@ msgid ""
 "zero. The further the Roll value from zero the higher liklihood the face is "
 "misaligned."
 msgstr ""
+"лица по вращению (повороту). Соотнесённые лица должны иметь значение "
+"вращения близкое к нулю. Чем дальше значение вращения от нуля, тем выше "
+"вероятность, что лицо неверно соотнесено."
 
 #: tools/sort/cli.py:45
 msgid "faces by their color histogram."
-msgstr ""
+msgstr "лица по их цветовой гистограмме."
 
 #: tools/sort/cli.py:46
 msgid "Like 'hist' but sorts by dissimilarity."
-msgstr ""
+msgstr "Как 'hist', но сортирует по несхожести."
 
 #: tools/sort/cli.py:47
 msgid ""
 "images by the average intensity of the converted grayscale color channel."
 msgstr ""
+"изображения по средней интенсивности новообращённого серого цветового канала."
 
 #: tools/sort/cli.py:48
 msgid ""
