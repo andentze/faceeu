@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-23 14:16+0100\n"
-"PO-Revision-Date: 2023-01-05 17:13+0700\n"
+"PO-Revision-Date: 2023-01-06 13:10+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -38,9 +38,9 @@ msgid ""
 "grouping. Each image is allocated to a bin by the percentage of color pixels "
 "that appear in the image."
 msgstr ""
-" Настройте параметр '-b' ('--bins')  для управления количеством бинов для "
-"группировки. Каждое изображение распределяется по бинам в зависимости от "
-"процента цветных пикселей, присутствующих в изображениях."
+" Настройте параметр '-b' ('--bins')  для управления количеством хранилищ для "
+"группировки. Каждое изображение распределяется по хранилищам в зависимости "
+"от процента цветных пикселей, присутствующих в изображениях."
 
 #: tools/sort/cli.py:24
 msgid ""
@@ -48,8 +48,8 @@ msgid ""
 "grouping. Each image is allocated to a bin by the number of degrees the face "
 "is orientated from center."
 msgstr ""
-" Настройте параметр '-b' ('--bins')  для управления количеством бинов для "
-"группировки. Каждое изображение распределяется по бинам по количеству "
+" Настройте параметр '-b' ('--bins')  для управления количеством хранилищ для "
+"группировки. Каждое изображение распределяется по хранилищам по количеству "
 "градусов, на которые лицо ориентировано от центра."
 
 #: tools/sort/cli.py:27
@@ -58,9 +58,9 @@ msgid ""
 "grouping. The minimum and maximum values are taken for the chosen sort "
 "metric. The bins are then populated with the results from the group sorting."
 msgstr ""
-" Настройте параметр '-b' ('--bins')  для управления количеством бинов для "
+" Настройте параметр '-b' ('--bins')  для управления количеством хранилищ для "
 "группировки. Для выбраной метрики сортировки берутся минимальное и "
-"максимальное значения. Затем бины заполняются результатами групповой "
+"максимальное значения. Затем хранилища заполняются результатами групповой "
 "сортировки."
 
 #: tools/sort/cli.py:31
@@ -128,32 +128,39 @@ msgstr "Как 'hist', но сортирует по несхожести."
 #: tools/sort/cli.py:47
 msgid ""
 "images by the average intensity of the converted grayscale color channel."
-msgstr ""
-"изображения по средней интенсивности новообращённого серого цветового канала."
+msgstr "изображения по средней интенсивности серого цветового канала."
 
 #: tools/sort/cli.py:48
 msgid ""
 "images by their number of black pixels. Useful when faces are near borders "
 "and a large part of the image is black."
 msgstr ""
+"изображения по их количеству чёрных пикселей. Полезно, когда лица находятся "
+"возле краёв и огромная часть изображения чёрная."
 
 #: tools/sort/cli.py:50
 msgid ""
 "images by the average intensity of the converted Y color channel. Bright "
 "lighting and oversaturated images will be ranked first."
 msgstr ""
+"изображения по средней интенсивности цветового канала Y. Яркое освещение и "
+"перенасыщенные изображения будут на первом месте."
 
 #: tools/sort/cli.py:52
 msgid ""
 "images by the average intensity of the converted Cg color channel. Green "
 "images will be ranked first and red images will be last."
 msgstr ""
+"изображения по средней интенсивности цветового канала Cg. Зелёные "
+"изображения будут на первом месте, красные - на последнем."
 
 #: tools/sort/cli.py:54
 msgid ""
 "images by the average intensity of the converted Co color channel. Orange "
 "images will be ranked first and blue images will be last."
 msgstr ""
+"изображения по средней интенсивности цветового канала Co. Оранжевые "
+"изображения будут на первом месте, синие - на последнем."
 
 #: tools/sort/cli.py:56
 msgid ""
@@ -161,27 +168,30 @@ msgid ""
 "and from lower resolution sources will be sorted first, whilst faces closer "
 "to the camera and from higher resolution sources will be sorted last."
 msgstr ""
+"изображения по их размеру в кадре. Лица дальше от камеры и от источников с "
+"менее высоким разрешением будут на первом месте, в то время как лица ближе к "
+"камере и из источников с более высоким разрешением будут на последнем месте."
 
 #: tools/sort/cli.py:59
 msgid " option is deprecated. Use 'yaw'"
-msgstr ""
+msgstr "опция исключена. Используйте 'yaw'"
 
 #: tools/sort/cli.py:60
 msgid " option is deprecated. Use 'color-black'"
-msgstr ""
+msgstr "опция исключена. Используйте 'color-black'"
 
 #: tools/sort/cli.py:82
 msgid "Sort faces using a number of different techniques"
-msgstr ""
+msgstr "Сортируйте лица различными способами"
 
 #: tools/sort/cli.py:92 tools/sort/cli.py:99 tools/sort/cli.py:110
 #: tools/sort/cli.py:148
 msgid "data"
-msgstr ""
+msgstr "данные"
 
 #: tools/sort/cli.py:93
 msgid "Input directory of aligned faces."
-msgstr ""
+msgstr "Входной каталог соотнесённых лиц."
 
 #: tools/sort/cli.py:100
 msgid ""
@@ -191,6 +201,11 @@ msgid ""
 "the images will be sorted in-place, overwriting the original contents of the "
 "'input_dir'"
 msgstr ""
+"Выходной каталог отсортированных соотнесённых лиц. Если не установлено и "
+"выбрана опция 'keep', тогда будет создана новая папка 'sorted 'внутри "
+"входной папки для выхода. Если не установлено и опция 'keep' не выбрана, "
+"тогда изображения будут отсортированы на месте, переписывая исходное "
+"содержимое исходное 'input_dir'"
 
 #: tools/sort/cli.py:111
 msgid ""
@@ -198,10 +213,13 @@ msgid ""
 "multiple folders of faces you wish to sort. The faces will be output to "
 "separate sub-folders in the output_dir"
 msgstr ""
+"R|Если выбрано, 'input_dir' должен быть родительской папской, содержащее "
+"несколько папок с лицами, которые вы хотите отсортировать. Лица будут "
+"выходить в отдельные суб-каталоги в выходном каталоге"
 
 #: tools/sort/cli.py:120
 msgid "sort settings"
-msgstr ""
+msgstr "настройки сортировки"
 
 #: tools/sort/cli.py:122
 msgid ""
@@ -212,10 +230,17 @@ msgid ""
 "respective bins, but the files will keep their original filenames. Selecting "
 "'none' for both 'sort-by' and 'group-by' will do nothing"
 msgstr ""
+"R|Выберите как лица будут сортированы. Выбор метода сортировки даёт "
+"изображениям новое имя, основанное на порядке появления изображения каким-"
+"либо методом.\n"
+"L|'none': Не сортировать изображения. Когда выбран метод 'group-by', выбор "
+"'none' значит, что файлы будут перемещены/скопированы в их соответственные "
+"хранилища, но файлы оставят свои исходные названия. Выбор 'none' для 'sort-"
+"by' и  'group-by' ничего не даст"
 
 #: tools/sort/cli.py:135 tools/sort/cli.py:162 tools/sort/cli.py:191
 msgid "group settings"
-msgstr ""
+msgstr "настройки группировки"
 
 #: tools/sort/cli.py:137
 msgid ""
@@ -225,6 +250,11 @@ msgid ""
 "by' but will not be binned, instead they will be sorted into a single "
 "folder.  Selecting 'none' for both 'sort-by' and 'group-by' will do nothing"
 msgstr ""
+"R|Выбор группы по методу переместит/скопирует файлы в пронумерованных "
+"хранилища, основанные на выбранном методе.\n"
+"L|'none': Не группировать изображения. Папки будут отсортированы выбранным "
+"'sort-by', но не будут сгруппированы, вместо этого, они будут отсортированы "
+"в единую папку. Выбор 'none' для 'sort-by' и 'group-by' ничего не даст"
 
 #: tools/sort/cli.py:149
 msgid ""
@@ -235,6 +265,11 @@ msgid ""
 "original files will be moved and renamed based on the selected sort/group "
 "criteria."
 msgstr ""
+"Оставлять исходные файлы в их исходных папках или нет. Выбор метода 'sort-"
+"by' значит, что файлы должны быть переименованы. Выбрав 'keep', значит, что "
+"исходные файлы останутся, и переименованые файлы будут созданы в указанной "
+"выходной папке. Снятие 'keep' значит, что исходные файлы будут перемещены и "
+"переименованы, основываясь на выбранной критерии сортировки/группировки."
 
 #: tools/sort/cli.py:164
 msgid ""
@@ -250,10 +285,15 @@ msgid ""
 "images, as this could result in a lot of folders being created. Defaults: "
 "face-cnn 7.2, hist 0.3, face 0.25"
 msgstr ""
+"R|Значение с плавающей точкой. Минимальный для использования порог для "
+"сравнения группировки с методами 'face-cnn', 'hist' и 'face'.\n"
+"Чем ниже значение, тем более дифференцированной будет группировка. Оставив "
+"-1.0, позволит Faceswap выбрать значение по умолчанию.\n"
+"L|"
 
 #: tools/sort/cli.py:181
 msgid "output"
-msgstr ""
+msgstr "выход"
 
 #: tools/sort/cli.py:182
 msgid ""
@@ -287,7 +327,7 @@ msgstr ""
 
 #: tools/sort/cli.py:215 tools/sort/cli.py:225
 msgid "settings"
-msgstr ""
+msgstr "настройки"
 
 #: tools/sort/cli.py:217
 msgid ""
